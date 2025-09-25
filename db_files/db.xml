@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+    <students>
+        <student>
+            <!-- Flat structure - no nesting here -->
+            <stud_id>STUD-21378</stud_id>
+            <stud_firstname>JUAN</stud_firstname>
+            <stud_middlename>NAVARO</stud_middlename>
+            <stud_lastname>DELA CRUZ</stud_lastname>
+            <stud_address>MALAYBALAY CITY, BUKIDNON</stud_address>
+            <stud_gender>MALE</stud_gender>
+            <stud_age>20</stud_age>
+        </student>
+    </students>
+    
+    <books>
+        <book>
+            <book_id>1001</book_id>
+            <book_title>Shoe Dog</book_title>
+            <book_pubdate>2016</book_pubdate>
+        </book>
+    </books>
+    
+    <batches>
+        <batch>
+            <batch_id>10</batch_id>
+            <!-- 🔥 NESTED ELEMENTS: Books inside batch -->
+            <batch_books>  <!-- ← NESTED CONTAINER -->
+                <book_id>1001</book_id>  <!-- ← NESTED CHILDREN -->
+                <book_id>1002</book_id>
+                <book_id>1003</book_id>
+            </batch_books>
+            <batch_studential>STUD-21378</batch_studential>
+        </batch>
+    </batches>
+    
+    <borrows>
+        <borrow>
+            <borrow_transactionId>AB31D</borrow_transactionId>
+            <borrow_date>SEPT. 15, 2023</borrow_date>
+            <borrow_duedate>SEPT. 25, 2023</borrow_duedate>
+            <borrow_returndate></borrow_returndate>
+            <!-- 🔥 NESTED REFERENCE -->
+            <borrow_bookbatch>10</borrow_bookbatch>  <!-- ← NESTED RELATIONSHIP -->
+            <borrow_fines>0</borrow_fines>
+            <borrow_status>NOT YET RETURNED</borrow_status>
+        </borrow>
+    </borrows>
+</library>
